@@ -1,0 +1,13 @@
+name: Generate-SBOM
+on:
+  release:
+    types: [published]
+jobs:
+  generate-sbom:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+    - name: Install Syft
+      run: |
+        curl -sSfL https://raw.githubusercontent.com/anchore/syft/main/install.sh | sh -s -- -b /usr/local/bin

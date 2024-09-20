@@ -19,10 +19,12 @@ jobs:
         echo "Debug ======> master"
     - name: Tar Assets
       run: |
-        echo 123 >> helloworld222
+        echo 123 >> helloworld222123
+        echo 456 >> helloworld222456
     - name: Upload Release Assets
       uses: AButler/upload-release-assets@v3.0
       with:
-        files: helloworld222
+        files: helloworld222456
         repo-token: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
-        release-tag: ${{ inputs.tag }}
+        release-tag: ${{ inputs.tag || '' }}
+      if: ${{ always() }}

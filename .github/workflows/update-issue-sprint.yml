@@ -33,7 +33,7 @@ jobs:
         token: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
         iteration-field: Sprint
         iteration: current
-        new-iteration: next
+        new-iteration: none
         statuses: 'New'
 
     # - name: Update Longhorn Community Sprint issues

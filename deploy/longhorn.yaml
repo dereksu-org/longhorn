@@ -129,7 +129,7 @@ spec:
   group: longhorn.io
   names:
     kind: BackingImageDataSource
-    listKind: BackingImageDataSourceL
+    listKind: BackingImageDataSourceList
     plural: backingimagedatasources
     shortNames:
     - lhbids
@@ -196,7 +196,7 @@ spec:
       type: string
     - description: The current state of the pod used to provision the backing image
         file from source
-      jsonPath: .status.currentState
+      jsonPath: .status.currentStat
       name: State
       type: string
     - description: The data source type

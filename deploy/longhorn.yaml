@@ -129,7 +129,7 @@ spec:
   group: longhorn.io
   names:
     kind: BackingImageDataSource
-    listKind: BackingImageDataSourceList
+    listKind: BackingImageDataSourc
     plural: backingimagedatasources
     shortNames:
     - lhbids
